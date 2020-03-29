@@ -19,7 +19,19 @@ import (
 )
 
 var n = flag.Bool("n", false, "omit trailing newline")
+
+/*
+	the function flag.Bool creates a new flag variable of type bool. It takes three arguments: the name of the flag
+	("n"), the variable's default value (false), and a message that will be printed if the user provides invalid argument,
+	an invalid flag, or -h or -help.
+*/
+
 var sep = flag.String("s", " ", "separator")
+
+/*
+	Similarly, flag.String takes a name, a default value, and a message, and creates a string variable, which must be accessed
+	indirectly as *sep and *n.
+*/
 
 func main() {
 	flag.Parse()
@@ -28,3 +40,18 @@ func main() {
 		fmt.Println()
 	}
 }
+
+/*
+	When the program runs, it must call flag.Parse before the flags are used, to update the flag variables from their default values. the non-flag argument
+	are available from flag.Args() as a slice of strings. If flag.Parase encounterss an error,it prints a usage message
+	and calls os.Exit(2) to terminate the program.
+
+	Some test cases for the program
+	$ go build pointers2.go
+	$ ./pointers2 a bc def
+	$ ./pointers2 -s / a bc def
+	$ ./pointers2 -n a bc def
+	$ ./pointers2 -help
+
+
+*/
