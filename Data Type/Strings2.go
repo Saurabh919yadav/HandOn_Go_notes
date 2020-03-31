@@ -22,7 +22,10 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	fmt.Println(basename("a/b/c.go")) //"c"
@@ -46,4 +49,36 @@ func basename(s string) string {
 		}
 	}
 	return s
+}
+
+/*
+	A simpler version uses the strings.LastIndex library function.
+*/
+
+func basename_new(s string) string {
+	slash := strings.LastIndex(s, "/") // -1 if "/" not found
+	s = s[slash+1:]
+	if dot := strings.LastIndex(s, "."); dot >= 0 {
+		s = s[:dot]
+	}
+	return s
+}
+
+/*
+	The path and path/filepath packages provide a more general set of functions for manipulating heirarchical names.
+	The path package works with slash-delimited paths on any platforms. It shouldn't be used for filenames,
+	but it is appropriate for other domains, like the path component of a URL. By contrast, path/filepath manipulates
+	file names using the rules for the host platform, such as /foo/bar for POSIX or c:\foo\bar on Microsoft Windows.
+
+
+	Let's continue with another substring example. The task is to take a string representation of an integer, such as
+	"12345", and insert commas very three places, as in "12,345".
+*/
+
+func comma(s string) string {
+	n := len(s)
+	if n <= 3 {
+		return s
+	}
+	return comma(s[:n-3]) + "," + s[n-3:]
 }
