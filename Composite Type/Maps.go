@@ -15,7 +15,10 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 	ages := make(map[string]int)
@@ -61,5 +64,39 @@ func main() {
 	for name, age := range ages {
 		fmt.Printf("%s\t%d\n", name, age)
 
+		/*
+			The order of map iteration is unspecified, and different implementations might use a different hash function, leading to
+			a different ordering.
+
+			To enumerate the key/value pairs in order, we must sort the keys explicitly, or instance, using the Strings function
+			from the sort package if the keys are strings. This is the common pattern:
+		*/
 	}
+	var names []string
+	for name := range ages {
+		names = append(names, name)
+	}
+	sort.Strings(names)
+
+	for _, name := range names {
+		fmt.Printf("%s\t%d\n", name, ages[name])
+	}
+
+	/*
+		As with slices, maps canot be compared to each other; the only legal comparison is with nil. To test whether two maps contain
+		the same keys and the same associated values, we must write a loop.
+	*/
+	fmt.Println(equal(map[string]int{"A": 0}, map[string]int{"B": 42}))
+}
+
+func equal(x, y map[string]int) bool {
+	if len(x) != len(y) {
+		return false
+	}
+	for k, xv := range x {
+		if yv, ok := y[k]; !ok || yv != xv {
+			return false
+		}
+	}
+	return true
 }
