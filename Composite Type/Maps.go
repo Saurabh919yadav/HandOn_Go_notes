@@ -1,5 +1,5 @@
 /*
-	The hash table is one of the most ingenius and versatileof all data structures. It is an unordered colletion of
+	The hash table is one of the most ingenius and versatile of all data structures. It is an unordered colletion of
 	key/value pairs in which all the keys are distinct, and the value associated with a given key can be retrieved,
 	updated, or removed using a constant number of key comparisons on the average, no matter how large the hash table.
 
