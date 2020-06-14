@@ -1,9 +1,9 @@
 /*
-	Constant are expressionswhose values is known to the compiler and whose evaluation is guaranteed to occur at compile
+	Constant are expressions whose values is known to the compiler and whose evaluation is guaranteed to occur at compile
 	time and not at run time. The ubderlying type of every constant is a basic type: boolean, string, number.
 
 	A const declaration defines named values that look syntactically like variables but whose value is constant,
-	which prevents accidental (or nefarious) change during program execution. For intance, ac onstant ismore appropriate
+	which prevents accidental (or nefarious) change during program execution. For instance, a constant is more appropriate
 	than a variable for a mathematical constant like pi, since its value won't change.
 */
 
@@ -37,7 +37,7 @@ func main() {
 	fmt.Printf("%T %1[1]v\n", time.Minute)
 
 	/*
-		When a sequence of constants is declared as a group, the riht-hand side expression may be omitted for all
+		When a sequence of constants is declared as a group, the right-hand side expression may be omitted for all
 		but the first of the group, implying that the previous expression ans its type should be used again.
 	*/
 
