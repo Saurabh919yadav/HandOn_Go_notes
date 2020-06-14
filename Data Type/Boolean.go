@@ -6,22 +6,19 @@
 	if the answer is already determined by the value of the left operand, the right operand is not evaluated,
 	making it safe to write expressions like : s != "" && s[0] == 'x'
 
-
 	There is no implicit conversion from a boolean value to a numeric value like 0 or 1, or vice versa.
 	It's necesary to use an explicit if.
 */
 
 package main
 
-import "fmt"
+func main() {
 
-func main(){
-	
 }
 
-func btoi(b bool) int{
-	if b{
+func btoi(b bool) int {
+	if b {
 		return 1
 	}
-	retutn 0
+	return 0
 }
