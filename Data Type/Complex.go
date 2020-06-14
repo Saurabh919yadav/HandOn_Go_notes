@@ -20,12 +20,12 @@ func main() {
 
 	/*
 		If floating point literal or decimal integer literal is immediately followed by i, such as 3.141592i or 2i,
-		it becomesan imaginary literal, denoting a complex number with a zero real component.
+		it becomes an imaginary literal, denoting a complex number with a zero real component.
 	*/
 	fmt.Println(1i * 1i)
 
 	/*
-		Complex numbers may be compared for equality with ++ and != . Two complex numbers are equal if their
+		Complex numbers may be compared for equality with ++ and !=. Two complex numbers are equal if their
 		real parts are equal and their imaginary parts are equal.
 
 
