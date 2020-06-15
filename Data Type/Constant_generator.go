@@ -21,7 +21,7 @@ func main() {
 	)
 
 	/*
-		This dec;ares Sunday to be 0, Monday to be 1 and so on.
+		This declares Sunday to be 0, Monday to be 1 and so on.
 	*/
 
 	fmt.Println(Sunday, Monday, Tuesday)
