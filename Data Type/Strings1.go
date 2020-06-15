@@ -3,8 +3,8 @@
 	but usually they contain human-readable text. Text strings are conventioanlly interpreted a UTF-8-encoded
 	sequences of Unicode code points(runes).
 
-	The built-in len function returns the number of bytes(not runes) in a string, and the index operation s[i] retieves
-	the ith byte of string s, where 0<=i<len(s)
+	The built-in len function returns the number of bytes(not runes) in a string, and the index operation s[i] retrieves
+	the ith byte of string s, where 0 <= i < len(s).
 */
 
 package main
@@ -16,11 +16,11 @@ func main() {
 	fmt.Println(len(s))
 	fmt.Println(s[0], s[7])
 	/*
-		The ith byte of atringdoes not necessarily means ith character of a string, because the UTF-8 encoding of
+		The ith byte of string does not necessarily means ith character of a string, because the UTF-8 encoding of
 		a non ASCII code point requires two or more bytes.
 
-		The substring operation s[i:j] yields a new string sonsisiting of the bytes of the original string starting
-		at index i and continuing up to , but bit including, the byte at indexj. the result contains j-i bytes.
+		The substring operation s[i:j] yields a new string consisiting of the bytes of the original string starting
+		at index i and continuing up to , but bit including, the byte at index j. the result contains j-i bytes.
 
 	*/
 	fmt.Println(s[0:5])
@@ -34,7 +34,7 @@ func main() {
 
 
 		String values are immutable: the byte sequence contained in a string value can never be changed,
-		though of couse we can assign a new value to a string variable.
+		though of course we can assign a new value to a string variable.
 	*/
 
 	x := "left foot"
