@@ -12,10 +12,10 @@
 	identical hardware.package Data Type
 
 	rune is a synonym for int32 and type byte is a synonym for uint8. Finally there is an unsigned integer type uintptr, whose
-	width i snot specified but is sufficient to hold all the bits of the pointer value. The uintptr is used only for low
+	width is not specified but is sufficient to hold all the bits of the pointer value. The uintptr is used only for low
 	level programming, such as the boundary of Go program with a C library or an operating system.
 
-	If the result of an arithmetic operation, whether signed or unsigned,has more bits than can be represented in the result
+	If the result of an arithmetic operation, whether signed or unsigned, has more bits than can be represented in the result
 	type, its is called overflow. The high order bits that do not fit are silently discarded. If the original number is a signed type
 	the result could be negative if the leftmost bit is 1.
 */
@@ -44,7 +44,7 @@ func main() {
 		Go also provides bitwise binary operators.
 		The ^ operator is bitwise OR (XOR) when used as binary operator, but when used as a unary prefix opeartor
 		it is bitwise negation or complement; that is, it returns a value with each bit in its operand inverted. The &^ operator
-		is bit clear (AND NOT): in the expression z = x&^ y, each bit of z is 0 if the corresponding bit of y is 1; otherwise
+		is bit clear (AND NOT): in the expression z = x &^ y, each bit of z is 0 if the corresponding bit of y is 1; otherwise
 		it equals the corresponding bit of x.
 
 	*/
@@ -72,7 +72,7 @@ func main() {
 
 	/*
 		In general, explicit conversion id required to convert a value from one type to another, and binary operators for arithmetic
-		and logic(exxept shifts) must have operands of the same type. Although it ocassionaly result in longer expressions,
+		and logic(except shifts) must have operands of the same type. Although it ocassionaly result in longer expressions,
 		it also eliminates a whole class of problems and makes programs easier to understand.
 	*/
 
