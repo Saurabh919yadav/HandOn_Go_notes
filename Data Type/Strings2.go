@@ -15,9 +15,6 @@
 	and so on. The strings package has similar functions, also called ToUpper and ToLower, that returns a new string
 	with the specified transformation aplied to each character of the original string.
 
-	The basename function below was inspired by the Unix shell utility of the same name. In our version, basename(s) removes
-	any prefix of s that looks like a file system path with components separated by slashes, and it removes any suffix that
-	looks like a file type.
 */
 
 package main
@@ -69,7 +66,6 @@ func basename_new(s string) string {
 	The path package works with slash-delimited paths on any platforms. It shouldn't be used for filenames,
 	but it is appropriate for other domains, like the path component of a URL. By contrast, path/filepath manipulates
 	file names using the rules for the host platform, such as /foo/bar for POSIX or c:\foo\bar on Microsoft Windows.
-
 
 	Let's continue with another substring example. The task is to take a string representation of an integer, such as
 	"12345", and insert commas very three places, as in "12,345".
