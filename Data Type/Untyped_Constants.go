@@ -1,10 +1,10 @@
 /*
-	Constants in Go are a bit unusual. Although a cinstant can have any of the basic data types like int or
+	Constants in Go are a bit unusual. Although a constant can have any of the basic data types like int or
 	float64, including named basic types like time.Duration, many constants are not committed to a particular type.package Data Type
 	The compiler represents these uncommitted constants with much greater numeric precision than values of basic
 	types, and arithematic on them is more precise than machine arithmetic; you may assume at least 256 bits of precision.
 	There are six flavors of these uncomitted constants, called untyped boolean, untyped integer, untyped rune,
-	untyped floating-point, untyped cmplex, and untyped string.
+	untyped floating-point, untyped complex, and untyped string.
 */
 
 package main
