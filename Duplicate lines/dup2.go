@@ -1,6 +1,6 @@
 /*
-Dup2 prints the count and text of lines that appear more than once
-in the input. It reads from stdin or from a list of named files.
+	Dup2 prints the count and text of lines that appear more than once
+	in the input. It reads from stdin or from a list of named files.
 */
 package main
 
@@ -14,8 +14,8 @@ func main() {
 	counts := make(map[string]int)
 	/*
 		A map is a reference to the data structure created by mke. When a map is passed to a function,
-		the function recieves a copy of the reference, so any changesthe called fuction makes to
-		the underlying dat structure will be visible through the caller's map reference too. In our example,
+		the function recieves a copy of the reference, so any changes the called fuction makes to
+		the underlying data structure will be visible through the caller's map reference too. In our example,
 		the values inserted into the counts map by countLines are seen by main.
 	*/
 	files := os.Args[1:]

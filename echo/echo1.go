@@ -6,7 +6,7 @@
 
 	The variable os.Args is a slice of strings. Slices are a fundamental notion in Go, for now,
 	think of a slice as a dynamically sized sequence s of array elements where individual
-	elements can be accessed as s[i] and contigous seqeuence as s[m:n]. The number of elements
+	elements can be accessed as s[i] and contigous sequence as s[m:n]. The number of elements
 	is given by len(s). As in most other programming languages, all indexing in Go uses half-open
 	intervals that include the first index but exclude the last, because it simplifies logic.
 
