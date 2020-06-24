@@ -6,9 +6,9 @@ package main
 
 	var name type = expression
 
-	Either the type or the  = expression part may be omitted, but not both. If the type is omitted, it is determined by the
+	Either the type or the = expression part may be omitted, but not both. If the type is omitted, it is determined by the
 	initializer expression. If the expression is omitted, the initial value is the zero value for thr type, which
-	is 0 for numbers, false for booleans,"" for strings, and nil for interfaces and reference types(slice, pointer, map
+	is 0 for numbers, false for booleans, "" for strings, and nil for interfaces and reference types(slice, pointer, map
 	channel, function). The Zero value of all of its elements or fields.
 	The zero value mechanism ensures that a variable holds a well defined value of its type; in Go there is no such thing as uninitialized
 	variable.
