@@ -1,6 +1,6 @@
 /*
 	A variadic funvtion is one that can be called with varying numbers of arguments. The most familiar examples are
-	fmt.Printf and its variants. Printf requires one fixed argument at the beginning, then accepts ant number of
+	fmt.Printf and its variants. Printf requires one fixed argument at the beginning, then accepts an number of
 	subsequent arguments.package Functions
 
 	To delete a variadic function, the type of the final parameter is preceded by an ellipsis, "...", which
@@ -15,7 +15,7 @@ func main() {
 	fmt.Println(sum(3))
 	fmt.Println(sum(1, 2, 3, 4))
 	/*
-		Implicitely, the caller allocates an array, copies the arguments into it,
+		Implicitly, the caller allocates an array, copies the arguments into it,
 		and passes a slice of the entire array to the function. The last call above thus behaves as the call below,
 		which shows how to invoke a variadic function whe the arguments are already in a slice: place an ellipsis
 		after the final argument.
