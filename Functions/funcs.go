@@ -1,5 +1,5 @@
 /*
-	A function declaration has a name, a list of parameters, anoptional list of results, and a body:
+	A function declaration has a name, a list of parameters, an optional list of results, and a body:
 	func name(parameter-list) (result-list){
 		body
 	}
@@ -18,7 +18,7 @@ import (
 
 func main() {
 	fmt.Println(hypot(3, 4))
-	// Calling four different functions with differen definitions
+	// Calling four different functions with different definitions
 	fmt.Printf("%T\n", add)
 	fmt.Printf("%T\n", sub)
 	fmt.Printf("%T\n", first)
@@ -47,8 +47,8 @@ func zero(int, int) int      { return 0 }
 	Go has no concept of default parameter values, nor any way to specify arguments by name, so the names of the
 	parameters and results don't matter to the caller except as documentation.
 
-	Arguments are passed by value, so the function recieves a copy of each argument; modifincations to the copy
-	do not affect the caller. However if the arguments contains somekind of reference, like pointer, slice, map,
+	Arguments are passed by value, so the function recieves a copy of each argument; modifications to the copy
+	do not affect the caller. However if the arguments contains some kind of reference, like pointer, slice, map,
 	function or channel, then the caller may be affected by any modifications the function makes to the variables
 	indirecly reffered to by the argument.
 */

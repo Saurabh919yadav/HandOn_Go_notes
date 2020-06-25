@@ -1,5 +1,5 @@
 /*
-	Functions are first-class alue in GO: like other values, function have types,
+	Functions are first-class value in GO: like other values, function have types,
 	and they may be assiged to variables or returned from functions. A function value may be called like any other function.
 
 */
